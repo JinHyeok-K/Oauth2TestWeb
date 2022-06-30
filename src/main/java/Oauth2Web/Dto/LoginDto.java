@@ -16,7 +16,7 @@ public class LoginDto implements UserDetails { // UserDetails interface 상속
 
     private String mid; // id 선언
     private String mpassword; // password 선언
-    private Set<GrantedAuthority> authorities; // 부여된 인증들의 권한
+    private Set<GrantedAuthority> authorities; // 부여된 인증들의 권한 선언
 
     public  LoginDto(String mid, String mpassword,Collection<? extends GrantedAuthority> authorities){
         this.mid = mid; // 인수로 받은 해당 mid
