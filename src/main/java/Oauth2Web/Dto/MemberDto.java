@@ -8,20 +8,20 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Getter @Setter @NoArgsConstructor
 @AllArgsConstructor @ToString
 public class MemberDto {
-    private int mno;
-    private String mid;
-    private String mpassword;
+    private int mno; // 회원 번호
+    private String mid; // 회원 id
+    private String mpassword; // 회원 비밀번호
 
 
-    public MemberEntity toentity(){
+    public MemberEntity toentity(){ // DTO -> entity
 
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(); // 비밀번호 변조용 객체 선언
 
-        return MemberEntity.builder()
-                .mid(this.mid)
-                .mpassword(encoder.encode(this.mpassword))
-                .role(Role.Member)
-                .build();
+        return MemberEntity.builder() // memberentity 반환
+                .mid(this.mid) // 해당 mid
+                .mpassword(encoder.encode(this.mpassword)) // 변조된 해당 비밀번호
+                .role(Role.Member) // Role(권한) 부여
+                .build(); //
     }
 
 }

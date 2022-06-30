@@ -11,10 +11,12 @@ import javax.persistence.Id;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @ToString @Builder
 public class MemberEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int mno;
-    private String mid;
-    private String mpassword;
-    private Role role;
+    @Id // 기본 키 생성(primary ke)
+    @GeneratedValue(strategy = GenerationType.AUTO) //  pk 생성 방식 : 특정 선택
+    private int mno; // 회원번호
+    private String mid; // 회원 id
+    private String mpassword; // 회원 비밀번호
+    private Role role; // 회원 권한
+
 }
+

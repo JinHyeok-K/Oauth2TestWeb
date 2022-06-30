@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface MemberRepository extends JpaRepository<MemberEntity,Integer> {
 
-    Optional<MemberEntity> findByMid(String mid);
+    Optional<MemberEntity> findByMid(String mid); // ID 를 이용한 entity 검색
 
 }
