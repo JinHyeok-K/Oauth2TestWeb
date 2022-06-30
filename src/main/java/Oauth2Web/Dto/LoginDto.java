@@ -26,7 +26,7 @@ public class LoginDto implements UserDetails { // UserDetails interface 상속
     }
 
 
-    @Override // 상속으로 인한 재정의
+    @Override // 인터페이스 상속으로 인한 재정의
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.authorities;
     }
