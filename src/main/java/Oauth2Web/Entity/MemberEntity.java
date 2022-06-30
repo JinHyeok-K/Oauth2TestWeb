@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity // 엔티티 영역 선언
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @ToString @Builder
 public class MemberEntity {

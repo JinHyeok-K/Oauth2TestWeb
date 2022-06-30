@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
-@Controller // 컨트롤러 역할을 한다고 선언(Templates 영역)
+@Controller // 컨트롤러 역할(Templates 영역)
 public class IndexController {
 
     @Autowired //자동 빈 생성 [ 자동 생성자 이용한 객체에 메모리 할당 ]

@@ -18,7 +18,7 @@ public class LoginDto implements UserDetails { // UserDetails interface 상속
     private String mpassword; // password 선언
     private Set<GrantedAuthority> authorities; // 부여된 인증들의 권한 선언
 
-    public  LoginDto(String mid, String mpassword,Collection<? extends GrantedAuthority> authorities){ // 생성자
+    public  LoginDto(String mid, String mpassword, Collection<? extends GrantedAuthority> authorities){ // 생성자
         this.mid = mid; // 인수로 받은 해당 mid
         this.mpassword = mpassword; // 인수로 받은 해당 mpassword
         this.authorities = Collections.unmodifiableSet(new LinkedHashSet<>(authorities)); // 인수로 받은 해당 권한(role)
@@ -29,7 +29,7 @@ public class LoginDto implements UserDetails { // UserDetails interface 상속
     @Override // 인터페이스 상속으로 인한 재정의
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.authorities;
-    }
+    } //권한 반환
 
     @Override  // 인터페이스 상속으로 인한 재정의
     public String getPassword() {
